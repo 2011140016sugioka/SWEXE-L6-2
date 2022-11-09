@@ -1,2 +1,12 @@
-<h1>Products#new</h1>
-<p>Find me in app/views/products/new.html.erb</p>
+<%= form_for @product, action: :create do |f| %>
+<p>
+  <%= f.label :name, '名前' %>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :price, '値段' %>
+  <%= f.text_field :price %>
+</p>
+  <%= f.submit "登録"%>
+
+<% end %>
